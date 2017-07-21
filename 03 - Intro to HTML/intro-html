@@ -1,0 +1,65 @@
+001 Unit 1 Objectives
+
+002 HTML Basics
+  - <tagName>Some content</tagName>
+
+003 Intro to MDN
+  - Mozilla Developer Network
+  - A treasure or live-saver for developer
+  - Excellent resource : https://developer.mozilla.org/en-US/
+  
+004 HTML Boilerplate and Comments
+  - something every HTML file have (underlying structure)
+       -> <!DOCTYPE html> : html5
+       -> head : something we dont in the page, metadata
+       -> body : contents of page
+       -> title : is important
+       -> comment : <!-- this is a comment -->
+       
+005 Basic Tags
+  -> h1, ... , h6 : decrease by size, s1 is biggest, h stands for heading
+  every h tag have its own line, even we put them in the same line
+  -> p : every in a p tag is in the same paragraph
+  -> b : make something very "bold" . This is not the best way anymore
+  Best way is using <strong></strong>
+  -> i : make the text italic. Altertative way is "em" that stands for emphasize.
+  -> Why <strong> and <em> is better?
+
+006 HTML Lists
+  -> 2 types: ordered list (numbered) and unordered list (bullet points)
+  -> ol and ul , combines the elements together
+  -> every elements in the list is inside <li> tags
+  -> Nested list
+
+007 ASSIGNMENT : HTML Lists
+
+008 Unit 2 Objectives
+  - write properly structured HTML
+  - common closing and self-closing tags
+  - small project
+  
+009 HTML Attributes
+  - Add information
+  - Key-Value pair : property="value"
+  - img is self-closing tag
+    <imt src="put link image here"> -> single attribute that we must have is src
+  - a tag used to link to another page , a stands for anchor
+    <a href="put link to another page here"> CLICK ME </a> 
+    -> a tag is inline element, it means a tag doesn't take its own line
+    -> need to make sure link is explicit, specifying http protocol 
+    -> we can be link to a page locally, which is in my machinet
+  - More about block and inline tags:
+    https://www.w3schools.com/html/html_blocks.asp    
+  
+010 ASSIGNMENT : Recreate webpage  
+  
+011 Divs and Spans
+  - useful for styling
+  - group things together, dont do anything
+  - div, span : generic container
+  - Difference div and span? div is block element (takes up in own line) but span is inline element
+  
+  * TRICK for Sublime: lorem + tab to create a arbitrary paragraph
+
+
+  
