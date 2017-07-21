@@ -1,0 +1,65 @@
+001 Unit objectives
+  - Write valid HTML Tables
+  -> Exercise 1 : Pokemon table
+  - HTML Forms: form, input, select, label tags
+  -> Exercise 2 : Recreate complex form
+  
+002 HTML Tables
+  - table using tr and td, which stand for table row and table data, to create table
+  - th used to make header of the table
+  - thead and tbody can be used to differentiate between header and content, though nothing change in appearing but it is more meaningful
+  - Add to table tag a attribute border="1" to show the border
+
+003 Exercise: Pokemon Table
+
+004 HTML Forms
+  - Getting user input
+  - Objectives: form , input, label, form validations
+  - 2 attributes of form : 
+    + action: where to send data to
+    + method: type of http request: GET OR POST
+      GET: searching (defalt method) -> data appears in address bar
+      POST: add something to database like login or sign up
+  - input tag : a lot of different types like text, password, color, radio,...
+
+005 Playing with Inputs
+  - 2 ways to submit:
+    <button>Submit</button>
+    <input type"submit">Submit</input>
+    -> identical things
+  - Attribute placeholder="username" can be added to the input tag to lets user know what input is
+  - form tag is something like a container that combine all input inside that into data form
+  - Attribute name is added to input tag to server can retrieve from that form
+  
+006 Label
+  - Something like captions that explains what input tag is
+  - 2 ways to use label
+    + input is nested inside label tag
+    + better way is to separate label and input by adding "id" for input and "for" for label to specify which input that label belongs to
+
+007 Form Validation
+  - Put some conditions (constraints) for the input
+  - Share just a LITTLE responsibility with server, not everything (why? these can be manipulated)
+  - required used to ensure input is not black
+  - Check format of data (correct format email) -> type = "email" instead of "text"
+  
+008 Dropdowns & Radio Button 
+  - type="radio" -> Usually one choice, can't be unchecked just change ur choice (e.g. Gender)
+    name attribute between all input in the same content of a form must be the same, so that they can be connected
+    value attribute need to be specified
+  - type="checkbox" -> Multiple Choice, Can be unchecked  
+  
+  - Using select tag to create dropdown menu
+  - Many option tag is used inside select for different choices
+  - One single name attribute for select tags
+  - Each option tag has its own value attribute, otherwise whatever inside options is used for value
+  
+  - Textarea: multi-line input
+  - Using rows and cols attributes to specify how wide and width textarea is
+  - Still need a name attribute
+
+009
+
+010
+  
+  
