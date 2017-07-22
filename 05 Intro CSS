@@ -74,14 +74,14 @@
   - Order of magnitude ?
   
 010 EXERCISE: Selectors Practice
+  - Some note: 
+  - Select element n-th of type div for example -> div:nth-of-type {}
+  - pseudo-class Selector: input:checked {}
+  - make text uppercase {text-transform : uppercase;}
+  - select first letter -> p::first-letter {}
+  - change attribute of element when mouse hover the element
+  h1:hover {}
+  - change color of the link after we click the link
+  a:visited {color: green;}
 
-011
-
-012
-
-013
-
-014
-
-015
 
