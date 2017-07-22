@@ -1,0 +1,87 @@
+001 Unit Objectives
+  - General rules of CSS
+  - Correctly include CSS
+  - Select elements by tag name, class, ID
+  - Style elements
+  - Debug HTML & CSS
+  -> Exercise
+  
+002 CSS Basics
+  - Cascading style sheets : html is structure, css define how things should look
+  - http://www.csszengarden.com/  CSS and without CSS -> add adjectives for your structure
+  -> how powerful CSS is !!!
+  - The general rule
+    selector {
+      property: value; -> key:value pairs 
+    }
+    -> selector can be tag (element) like h1, img... OR ID ... OR Class
+    
+003 Our First StyleSheet
+  - Where to put CSS: Inline -> put inside elements, not a good idea ; 
+  Using style tag in head section, type="text/css", CSS looks fine but overall is bad ; 
+  LAST and BEST is write css in seperated file, how to link : using link tag in head section
+  with 3 attributes: rel="stylesheet", type="text/css", href->where we put css file
+
+004 CSS colors
+  - Built-in Colors: # of colors is limited, hard to remember all -> not popular
+  - Hexadecimal : # + string of 6 hexadecimal number like #FF1493
+  #FF0000->red ; #00FF00->Green ; #0000FF->Blue ; #FFFFFF->white ; #000000-> black
+  -> Tool : colorpicker
+  - RGB : 3 channels : red, green, blue; using 10-based; each ranges from 0 - 255
+  e.g. color: rgb(0, 255, 0);
+  - RGBA : one channel added (alpha means transparency ranges from 0.0 -> 1.0)
+  
+005 Background and Border
+  - background attribute used to change color of something
+  - a image can be set to background, automatically repeat all the page
+  body { background : link(put link to image here);)
+  - border{border-color: purple; border-width: 5px; border-style: solid;}
+  This is equal to -> border: 5px solid purple; -> shortcut
+  
+006 CSS Selectors:
+  - The basics: elements (type of tag), ID, Class
+  - id: each id appears only one time in page, refer to id in css : #id{}
+  - class selector: a way to combine many elements and apply all in class the same style
+  - text-decoration attribute
+
+007 Chrome Inspector
+
+008 More advanced selectors
+  - Star (*) : apply style for all elements in the page
+  - Descendant selectors: 2 or more tag name or selectors -> li a {} -> choose every anchor tag inside li 
+   -> Question : more than one generation is acceptable? yes -> ul li a - same as - ul a
+  - Adjacent Selectors 
+  e.g. h4 + ul {something} -> we are choosing ul that same level with h4 tag and comes right after h4 tag
+  - Find out more in : https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048
+  - Attribute selectors: 
+  e.g. a[href="http://www.google.com] -> choose a element based on there attribute [property="value"]
+  - nth-of-type
+  e.g. we want to select the third ul element, we do the following
+  ul:nth-of-type(3){something}
+  Select every third li in every group of li in page (can be more than 1)
+  li:nth-of-type(3){something}
+  Select every even number (2, 4, 6 ...) of li in the page
+  li:nth-of-type(even){something}  
+  
+009 Specificity and the Cascade
+  - select parent -> all children element is effected
+  - a element inherits all the style of its parents, if attributes overlap each other, it will use the attribute of the closest parent
+  - e.g. if color of grandparent is red and color of parent is blue -> child use blue
+  - What about more complex case: id selector > class selector > element selector > parent selector > grandparent selector ...
+  -> order of decreasing of priority
+  - So how to calculate priority: https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
+  AND https://specificity.keegan.st/
+  - Order of magnitude ?
+  
+010
+
+011
+
+012
+
+013
+
+014
+
+015
+
