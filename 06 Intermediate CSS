@@ -1,0 +1,48 @@
+001 Unit Objectives
+  - common font and text properties using CSS
+  - include external fonts
+  - box-model concepts
+  - 3 projects : tic-tac-toe, image portfolio site, html+css blog
+
+002 Text and Fonts
+  - Font family, font size, font weight, line height, text align, text decoration
+  -> http://www.cssfontstack.com/
+  - font-family: Arial, Georgia -> built-in fonts, limited, depend on machine
+  - font-size: 200px || ems -> relative font size (dynamic)
+  2.0em -> double the size of the the parent element, not explicitly value 
+  default size of browser is 16px , so 1em = 16px (if we haven't set font-size anywhere)
+  
+003 More Text and Fonts
+  -> font-weight: how bold (thick) the text are, value can be : bold, normal or number 100 - 800, 800 is heaviest
+  -> line-height: space between line, normally from 1.5 to 2
+  -> text-align: right, center, left
+  -> text-decoration: underline, line-through
+
+004 Using Google Fonts
+  https://fonts.google.com
+  -> include (online or file locally) and using
+
+005 Box Model
+  - *IMPORTANT CONCEPT*
+  -> every element has a box around it -> style properties on them
+  -> 4 parts of box that we can manipulate
+    + Content: blue part when hover the mouse over it (Chrome inspector)
+    + Padding: space between border and content(text)
+    + Border
+    + Margin: space between the border and anything else outside
+    -> add space between elements (2 images for example)
+  - using width, height (px or %) to change size of content of element
+  p {height: 50%} -> size of "content" is 50% of size of parent   
+  - padding: 10px -> increase padding of 4 sises by 10px -> green part (chrome inspector)
+  - margin: -> orange part with chrome inspector
+  margin: 0 auto 0 auto -> element now is in center OR -> margin: 0 auto;
+
+006
+
+007
+
+008
+
+009
+
+010
