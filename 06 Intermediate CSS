@@ -37,8 +37,12 @@
   - margin: -> orange part with chrome inspector
   margin: 0 auto 0 auto -> element now is in center OR -> margin: 0 auto;
 
-006
-
+006 Create Tic Tac Toe Board
+  -> div is block element (automatically starts a new line and takes its own line), so how to put multiple div elements in the same line?
+  Answer: 1. reduce its content size -> 2. float: left that div element (change default setting)
+  -> there are little space that is created automatically by browser between image element (image is inline element)
+  How to get rid of it? float : left -> solve this problem
+  
 007
 
 008
