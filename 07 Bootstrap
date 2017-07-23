@@ -39,10 +39,38 @@
   -> 2 main important class
   
   -> Another type of form : form-inline 
-  Form in one line that all style are controlled by this class
-  
+  Form in one line that all style are controlled by this class  
 
-005
+005 Nav Bars
+  -> CUSTOMIZED NAVBAR
+  - <nav class="navbar navbar-default"></nav>
+  -> Above line create a bar that contains all the things like button that is clickable to go somewhere
+  -> Inside this nav element can be : 
+    + may be one clickable div (a tag inside) that redirect to the homepage (put at the left most of the bar)
+    This div has class = "navbar-header"
+    + ul that has class = "nav navbar-nav" contains some li
+    each li contains one a tag that redirect to categories of the page
+    + may be another ul, also has class = "nav navbar-nav navbar-right"
+    -> add class navbar-right
+    This ul contains 2 li , each li contain a tag that links to Login and Sign-up page
+    
+  -> USING DEFAULT NAVBAR FROM HOMEPAGE
+  Some features doesn't work without javascript
+  You have to include also JQUERY before include bootstrap.js because bootstrap.js rely on JQUERY
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  Everything inside above line is dissappear when in mobile device
+  Now, adding the hamburger button and make it work
+  Put the following line inside the div that has class="navbar-header"
+  
+  <button type="button" class="navbar-toggle collapsed" data-toggle="	collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+	</button>
+  
+  -> Here, data-target is important, the value has to be the same id of the div that has class="collapse navbar-collapse"
+  Notice value of data-target has a # ahead
 
 006
 
