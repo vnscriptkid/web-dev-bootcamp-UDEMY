@@ -1,0 +1,57 @@
+001 Unit Objectives
+  -> Make really good-looking site
+  - 1: What and Why use it
+  - 2: Include locally OR using CDN
+  - 3: Use common Bootstrap components like navs and buttons
+  - 4: layout using bootstrap grid system
+  -> Project: Portfolio Site
+  -> Project: Startup Landing Page
+
+002 What is bootstrap?
+  - Bootstrap homepage: http://getbootstrap.com/
+  - HTML, CSS, JavaScript Framework -> someone's else code
+  - Single CSS file + single JavaScript file  
+
+003 Adding Bootstrap to a Project
+  - 2 main choices: 
+    + download bootstrap , include bootstrap.css in css folder
+    + include online CDN version
+  - Apply with button: 
+  class="btn btn-danger btn-xs" -> btn-danger: red color 
+  class="btn btn-success btn-xs active" -> active : current page
+  class="btn btn-success btn-xs disabled"  
+  btn-xs -> extra small size ;
+  
+  -> btn can be applied with anchor tag <a>:
+  <a href="http://www.getbootstrap.com" class="btn btn-info btn-lg">Bootstrap Docs</a>
+  : btn-info-> blue color ; btn-lg -> large;
+
+004 Forms and Inputs
+  - Note when using Bootstrap: Don't try to expert in memorization
+  - Jumbotron : key content
+  - Example: Create a div that has class="jumbotron" , a heading h1, a paragraph
+  a button that class = "btn btn-success btn-lg"
+  Put a div that has class="container" , so all inside container is centered
+  
+  -> Forms: 
+  .form-group group elements together, add some space between groups
+  .form-control -> without it my form looks very inferior
+  -> 2 main important class
+  
+  -> Another type of form : form-inline 
+  Form in one line that all style are controlled by this class
+  
+
+005
+
+006
+
+007
+
+008
+
+009
+
+010
+
+011
