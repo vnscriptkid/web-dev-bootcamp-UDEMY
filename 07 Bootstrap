@@ -67,19 +67,27 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
-	</button>
-  
+	</button>  
   -> Here, data-target is important, the value has to be the same id of the div that has class="collapse navbar-collapse"
   Notice value of data-target has a # ahead
 
-006
+006 The grid system
+  - Number 12 very important , corresponding to 12 units
+  - Need container class outside
+  - A div class row that wrap columns inside it
+  - Each column belongs to class = "col-lg-1 pink" -> number here is 1 unit
+  -> Now we've already known how to devide your site, but it still looks inferior -> next video	
 
-007
+007 The grid system part 2
+  - divide site into parts dynamically depend on size of screen
+  - 4 different sizes
+  + col-lg-<number>	->large
+  + col-md-<number>	->medium
+  + col-sm-<number>	->small
+  + col-xs-<number>	->extra small
+  - nested grid (even nested grid has its own 12 units)
 
-008
+008 Bootstrap Image Gallery
 
-009
+009 Startup Lading Page
 
-010
-
-011
