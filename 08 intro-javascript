@@ -1,0 +1,59 @@
+001 Unit Objectives
+  - Evaluate JS using developer console
+  - 5 JS primitives
+  - Define variables with var keyword
+  - console.log, alert, prompt
+  
+002 JS Console  
+  - Testing purpose
+003 Prmitives
+  - Numbers: 4 3.9 -10
+  - Strings: "Hello World" "43" -> inside of quotes (single or double -> but must match)
+    + concatenation
+    + using blackslash to include quote inside a string without error
+    -> but what if blackslash is in use (blackslash used to ignore special character after it)
+    -> solution: used 2 blackslash -> return 1 blackslash
+    -> s.length -> return how many characters string has
+    -> access character using square bracket [] and index
+    ex : "thanh"[0] -> "t"
+         "thanh"[4] -> "h"
+         "thanh"[5] -> undefined (make sense?)
+    
+  - boolean : true false
+  - null undefined
+  
+004 Primitives Exercises
+-> 100 % 3 -> 1
+-> ("blah" + "blah")[6] -> "a"
+-> "hello".length % "hi\\".length -> 5 % 3 -> 2
+
+005 Variables
+  - basic concept for every programming language
+  deep level : name points to somewhere in memory
+  - Define variable in JS: using var keyword
+  - JS: dynamic typing (can change from one type to other type without problem)
+  -> can be a problem in other language
+  - convetion naming -> var isVisited = true; -> camelCase
+
+006 Null and Undefined
+  - undefined (have no value but already declared)
+  - null : nothing (sound similar :)) -> check it out)
+  -> maybe null is a type of value ?!? means nothing
+  -> again , undefined is no value at all
+  
+007 Useful build-in method
+  -> alert -> browser pops up a box 
+  -> prompt -> get input from user, can be assigned a variable
+  -> console.log -> print to the console
+  
+  Bonus: clear() -> clear console , a method
+
+008 JS in seperated file
+  - html using script tag to link to js file, script tag can be placed in body or head
+  - load html -> code run
+
+009 Exercise 1
+
+010 Exercise 2 
+
+
