@@ -89,6 +89,17 @@
 
 008 Bootstrap Image Gallery
   - https://unsplash.com/ : awesome photos
-
+  - Notice: Images inside grid system doesn't fit properly ?
+  -> solution : wrap around image a additional div that belongs to class="thumbnail"
+  - Some full-of-type icons can be found in bootstrap/components -> Glyphicons
+  - How to include it ? Copy example from homepage, include it (can be inside h1)
+  - Problem? If we scroll down , our navbar dissapears
+  -> Fix: add a class to navbar -> navbar-fixed-top
+  - Another problem arise: There's no space between navbar and jumbotron now -> looks idiot
+  -> How this happens? Maybe navbar-fixed-top is no longer belongs to body
+  -> Idea? Make a litte padding-top (70px is enough) for your body -> Problem resolved
+  - More icons : http://fontawesome.io/
+  -> have to include file css
+  
 009 Startup Lading Page
 
