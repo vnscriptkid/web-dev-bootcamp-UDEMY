@@ -42,9 +42,19 @@
   + document.querySelectorAll() -> works same as querySelector (CSS-style selector) but return a all result it find in a list
   each element again is a object
   
-005
+005 Manipulating Style (few from many ways)
+-> Objectives:
+  - changing an element'style
+  - adding/removing classes
+  - changing content of a tag
+  - changing attributes (src, href, etc..)
+  
+-> Style: is a way to manipulate an element's style, actually style is a property of DOM object, that contains many other other properties
+like : color , border , fontSize , background, marginTop
 
-006
+
+
+006 
 
 007
 
