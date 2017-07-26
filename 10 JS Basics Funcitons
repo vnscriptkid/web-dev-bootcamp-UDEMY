@@ -1,19 +1,71 @@
 001 Unit Objectives
+  - Write function declaration and function expression
+  - Explain console.log and return
+  - Define function takes multiple arguments
+  -> Advanced : Scope and hiher order function
 
 002 Intro to Functions
+  - Why we use function ? REUSEABLE code
+  - The building blocks code
+  - Difference between referring to a function and calling a function
+    -> sayHi -> content of function
+    -> sayHi() -> execute function  
 
 003 Arguments
+  - Function takes input
+  - Notice : Dont need "var" keyword in arguments, need a keyword "function" before function name
+  
+004 The Return Keyword
+  - A way to send back output , so we can capture it
+  - Notice : return is different with print something to the screen
+  - every function return something, if you dont explicitly return something
+  it will return undefined
+  - We can save return to a variable (like capture)
+  - Bonus: str.charAt(0).toUpperCase() + str.slice(1)
+  -> charAt return character at specified position, toUpperCase() capitalizes string or char, slice(1) means we want
+  from index 1 to the end  
+  - typeof -> return type of variable -> "number", "string", "undefined"
+  if x = null -> typeof x is "object"
+  - Another use of return is stop executing of a function
+  - Function declaration and Function expression is different
+    + function declaration : we declare name of the function
+    + function expression : we dont declare name of function, rather than that
+    , we just declare a variable to capture return value from function
+  -> When we use one over another ?
 
-004 The Return Keywork
-
-005 Functions Quiz
+005 Functions Quiz  
 
 006 Functions Problem Set
+  -> isEven(number) 
+  -> factorial(number)
+  -> kebabToSnake(str) -> replace dash with underscore
+  Using replace function that replace something in str by something else
+  -> Notice : This function normally only replace the first instance that it encounter
+  -> Solution: Have to use global identifier like this -> /something/g
+  -> Bonus: g -> gi for case-insensetive
 
 007 Solution
-
+  
 008 Scope Code
+  - Context where code is executed
+  - global and local(inside function)
+  - inside can see outside , but out side can't see inside
+  - variable inside a function can be refer to a global variable by name (without keyword var)
+  -> if using var keywork (even samename as global), 2 variables are different
+  - when we difine a function, we define a scope (important)
 
 009 Scope Quiz
 
 010 Higher order functions
+  - Pass functions to other functions
+  - setInterval is a built-in function takes 2 argument : a function and miliseconds the function is called
+  example : setInterval(sing, 1000) -> 1s every calls, calls just mention name not ()
+  This function return a number
+  - Dont need to define function ahead
+  -> We can pass directly anonymous function like
+  setInterval(function(){//doSomething}, 2000);
+
+
+
+
+
