@@ -1,0 +1,37 @@
+001 Compare Objects and Array
+
+002 Intro to Objects
+  - Inside curly bracket always is object in JS
+  - A way to model a group of data that related to each other 
+  - Example object person has name, age, cellphone... (all belongs to a person)
+  - object dont have any built-in function like array
+  - Retrieve data from object: 2 ways
+    + bracket -> object["name of property here"]
+    + dot notation
+    -> when to use each one: 
+    + if property starts with number -> can't use dot notation, it's not valid
+    + if property name has space in it -> have to use square bracket
+    + inside the square bracket can be a variable that store name of property
+    but after dot notation must be name of property explicitly
+    
+003 Nested Objects and Array
+  - objects can be a element in array, and on the other hand, array can be nested object
+  - example posts array contains lists of post  
+  - we often use them in conjunction to each other
+  
+004 Objects Quiz  
+
+005 Movie Database Exercise  
+
+006 The keyword this
+  - underscore
+  - keyword this : means different thing in different situation
+  - namespacing
+
+007 JS Methods
+  - object has properties and also methods
+  - console.log() -> console is a method and log is method of that object
+  - user.delete() -> delete just a instance of user , delete is inside user'namespace and dont conflict with other namespace
+
+
+
