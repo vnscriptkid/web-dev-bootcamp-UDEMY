@@ -1,0 +1,56 @@
+001 Intro to DOM
+  -> Combine JS and HTML+CSS: JS interact with HTML , make things interactive
+  - Why you should care:  games, form validations, animation ...
+  -> to sum up: interactivity  
+  
+002 Defining DOM
+  - Document Object Model
+  - interface between JS and HTML+CSS
+  - How DOM is contructed: 
+    + browser turns every HTML tag into Javascript object that we can manipulate
+    + everything is stored inside of the document object
+  - how to see it ? in console, type document
+  then console.dir(document)
+
+003 SELECT and MANIPULATE
+  - choose something and make it do something
+  var h1 = document.querySelector("h1"); -> select
+  h1.style.color = "pink" -> manipulate
+  
+  - very fun example to illustrate power of DOM
+  change background of body after 1 second 
+  remember how ? setInterval() function takes 2 argument
+  one is anonymous function and second is time in miliseconds between each call
+
+004 Important Selector Methods
+  - document.somthing : document.body, document.head
+  - Methods : 
+  + document.getElementById() -> one id only occur only one time per page
+  + document.getElementsByClassName() -> notice 's' -> return a list (not array?!?) even one element
+  -> can access by [index], but we can't use forEach because it's not array???
+  -> each element in the list returned is a object
+  
+  + document.getElementsByTagName()-> same above, take in a tag name
+  
+  + document.querySelector() -> css-style selector, only gives us first instance that it encounters
+  -> very important to note -> return a object (ONLY ONE)
+  Argument something like ".bold", "#special", "li a.special"
+  When to use ? Example case : when we want to select body 
+  + in case of getElementByTagName , it returns a list -> have to access element
+  + with this method, we right away get the object
+  
+  + document.querySelectorAll() -> works same as querySelector (CSS-style selector) but return a all result it find in a list
+  each element again is a object
+  
+005
+
+006
+
+007
+
+007
+
+008
+
+009
+
