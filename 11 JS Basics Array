@@ -1,0 +1,65 @@
+001 Objectives
+  - Difine array and add data to array
+  - built-in array methods
+  - simple projects : console toTo list
+  
+002 Intro to Array
+  - just group of data (can be different types -> not as C/Java -> JS dont care types, similar Python)
+  - deep level: contiguous cells of memory
+  - we can access element in array by square bracket and index (like access character in string)
+  - we can change value of element of array by reassign another value (not work with string)
+  - we also can add data by assign value like arr[index] = value;  
+  - To sum up: 
+    + define a array : 2 ways 
+    var friends = []; -> no friends
+    var friends = new Array() -> empty array like above
+    + arrays can hold any types of data
+    + arrays have a length property : arr.length -> return number of elements of array  
+
+003 Array Methods : Just some popular methods
+  - reference : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+  - More convinient than the last lecture to add element to array without remember index is
+  using method push(ele) -> add to the very end of array
+  This method return the number of elements of new array (after push)
+  - pop() do opposite with push
+  Take no argument, remove the last element of array
+  - shift() and unshift()
+  Same but do at the top of array. unshift() -> add to the top. shift() removes first element and return that element
+  - Next is indexOf(ele) -> find first instance of element in array, return index if found, return - 1 if not found
+  - Use slice(a, b) to take partial of array from a upto b but not including b (a, b is indexes)
+  slice() with no argument means takes all elements
+  
+004 Array Quiz
+  - Define a 2-dimentional array (nested array -> array inside array)
+  var friendGroups = [
+  ["Harry", "Ron", "Hermione"],
+  ["Malfoy", "Crabbe", "Goyle"],
+  ["Mooney", "Wormtail", "Prongs"]  
+  ];
+  -> friends[2][0] -> 2 here is index of nested array, 0 here is index of element of this nested array
+
+005 Todo List
+  -> prompt() function pop up a box, take user's input, return string 
+  -> do while for at least one loop
+  -> while also can be used but need 2 prompt() that that take input, one outside before jump into while
+  and another at the end of while
+  
+006 Array Iteration
+  - Objectives: for loop iterate over an array, use forEach -> compare these 2 methods
+  + for loop just do the same as every language (iterate over array or characters of string)
+  + forEach -> how to use : arr.forEach(someFunction) -> normally anonymous function like
+  
+  colors.forEach(function(color){               -> anonymous function have to take argument represent for each element
+    //doSomething with each element in array
+  });
+
+  function that is passed can be difined ahead, but when we pass dont use parentheses ()
+  idea here is we want forEach is the person actually execute that function , not us. So again no ()
+  
+007 Todo List improved version
+  - Splice can be used to delete element of array in-place
+  - Notice: break means get out the loop immediately, continue means skip everything behind it (still check condition)
+
+008 Building our own ForEach (Advanced)
+  - will come back to this later
+
