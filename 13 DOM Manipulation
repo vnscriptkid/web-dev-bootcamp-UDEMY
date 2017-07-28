@@ -52,15 +52,43 @@
 -> Style: is a way to manipulate an element's style, actually style is a property of DOM object, that contains many other other properties
 like : color , border , fontSize , background, marginTop
 
+Idea? When to change style ? When we want interactivity between user and browser ? User do something on the page 
+(answer a question for example ?!?) -> then immediately something happens corresponding to that event withour interact with server
+-> In those cases -> we use JS to interact with objects in DOM 
+
+How ? 
++ Simple way : just document.tagSomething.style.color = "red" for example -> we can call this way is DIRECT CHANGING
+-> Problem with this way : if we have to make 100 changes that is the same to each other? how to reduce work ?
++ we may want seperate work ? We may want predifine classes that define style for particular element
+-> then we use JS to set class for elements that we want changing
+-> with this way , we will reduce overlap between JS , CSS , HTML -> Best way
+
+Implement? 
+tag = document.querySelector("h1");
+tag.classList.add("another-class") -> actually classList is not an array , it's a list (:)))
+            .remove
+            .toggle -> turn on if off, turn off if on -> simple but very useful
+
+006 Manipulate Text and Content
+  - textContent -> return a string of all text contained in a given element
+  -> Just extract ONLY text, not including all tags inside
+  -> We CAN reset content by assign another string value . BUT carefully because it change the structure of html
+  
+  - innerHTML -> including all tags inside current element -> Same problem when changing as above
+  
+  ANOTHER IMPORTANT between 2 of these:
+  Imagine we reset the content in 2 above cases, and we want change by something like 
+  <h1> THIS WILL BE RENDERED </h1>
+  GUESS what happen? with textContent the everything is printed in plain text (including tags)
+  on the other hand, with innerHTML the string is treated as html tags and render a h1 heading 
+  
+007 Manipulating Attributes
+  - something like : href, src ... -> inside quotes
+  ... link.getAttribute("href") -> select link of of a anchor tag
+      link.setAttribute("href", "www.google.com") -> change the attribute of a anchor tag
+
+007 Playing with GOOGLE code along
 
 
-006 
 
-007
-
-007
-
-008
-
-009
 
