@@ -88,6 +88,10 @@ tag.classList.add("another-class") -> actually classList is not an array , it's 
       link.setAttribute("href", "www.google.com") -> change the attribute of a anchor tag
 
 007 Playing with GOOGLE code along
+  - We can using a loop to change all elements
+  REMEMBER document.getElementsBy... -> return a list NOT A ARRAY
+  SO we can't use forEach 
+  Instead we can use for or while traditionally
 
 
 
