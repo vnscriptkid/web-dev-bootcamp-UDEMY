@@ -1,0 +1,20 @@
+001 Introduction to Events
+  - Event: when we click, hover, drag, press ... something -> something happens
+  - PROCESS : Select element -> Attach event to selected element (add event listener)
+  - Syntax : element.addEventListener(type, functionToCall) -> type here is type of event
+  -> function here is a callback -> every time the event occur -> this function is called  
+  - We can use loop do add many event listeners
+  
+002 Color Toggle Exercise
+2 ways to complete this task: 
+- Create a variable isPurple to check current state -> change to other state: isPurple = !isPurple
+- select element -> classlist -> toggle -> a class predefined
+
+003
+
+004
+
+005
+
+006
+
