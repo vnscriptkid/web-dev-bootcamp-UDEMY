@@ -11,8 +11,17 @@
 - select element -> classlist -> toggle -> a class predefined
 
 003 Score Keeper Project
-
-004
+  - Using event change for the input type number
+  
+004 Other types of events
+  - Lot of stuff here: https://developer.mozilla.org/en-US/docs/Web/Events
+  - 2 popular events : mouseover -> catch the event that mouse over the element
+                       mouseout -> opposite above
+  - We can use a loop to loop through a list of elements (li for example)
+  - Using keyword this inside anonymous function of addEventListener, refers to current element that we're adding event
+  
+  - AGAIN, We dont want JS style every elements individually, other than that, we want to predefine style in css, then use JS to add
+  style (class) for element by something like : this.classList.add("selected");
 
 005
 
