@@ -1,0 +1,21 @@
+001 Templates and EJS
+- Template means dynamic page : ejs or jade ...
+- res.send() can give us html code returning to user but obviously it's a bad idea to
+put all html code here
+-> Solution: res.render('somewhere.html')
+-> another problem: html is just a static page
+-> Solution: ejs comes in -> we can put use js in html file (embeded js) -> can reused many times
+res.render('somepage.ejs') -> when we render file, server first look at "views" folder and look for the file, then return to the user
+- ejs is a package -> install : npm install ejs --save -> dont have to include by calling require something
+
+- How we can give information for ejs file ? -> render function can take second argument as a object
+key:value -> value here is what we want to send to ejs file, key is the identifier that used to call that value
+- In ejs file , we use syntax similar as Java (jsp) to embed js code to html code: <%= key%>
+
+002 EJS Conditionals and Loops
+
+003 Serving Custom Assets
+
+004 Post Requests Part 1
+
+005 Post Requests Part 2
