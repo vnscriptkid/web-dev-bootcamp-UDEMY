@@ -40,3 +40,8 @@ we may need include a footer part , or navbar , or anything... we use among alot
 004 Post Requests Part 1
 
 005 Post Requests Part 2
+With post request, we change route to app.route().
+Everything else is the same
+To extract data from form that using post method
+We have to include module called body-parser that transform req.body to object
+After processing we may want to use redirect to some path (that we've already defined so we dont have to render again)
