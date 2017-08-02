@@ -4,6 +4,29 @@
   - Flexible, lightweight framework (but powerful)
   
 002 First Express App
+- To use framework, put a : require('express');
+-> here this sentence actually is a function. So we have to call that funciton as: 
+var app = require('express')(); 
+
 003 The Package.json
+- This file is created when type: npm init -> in project folder
+- Contains information about project and version of all libraries that we install in file
+
 004 Route params
-005 Express Basics
+- We use route to tell server what to do when user send a request
+somthing like: app.use('/', function(){})
+At least, 2 parameters which are : path and a callback function that is executed when the route is called
+- When route is '*' , it means all routes -> normally put at the end to covers all cases 
+- when route is something like /:subFolder/ -> here subFolder is a parameter , it can be many thing
+To get this value from request of user -> req.params.param-name
+
+005 Express Basics Exercise
+- Requirements: 
++ /speak/pig -> print : "The pig says 'Oink'"
++ /speak/cow -> print : "The cow says 'Moo'"
++ /speak/dog -> print : "The dog says 'Woof Woof!'"
+-> param here can be -> :animal
+-> Observation: each animal have a particular sound
+We may think of using a object that contains (key-value pairs)
+key here is name of animal and value is sound of it: animals{name1:sound1,...}
+Each time we want to get sound of it -> animals.name1 for example
