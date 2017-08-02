@@ -13,8 +13,29 @@ key:value -> value here is what we want to send to ejs file, key is the identifi
 - In ejs file , we use syntax similar as Java (jsp) to embed js code to html code: <%= key%>
 
 002 EJS Conditionals and Loops
+- Quite similar to java
+- type of tags: <%= %> -> return value -> add something to the html
+                <% %> -> do logic, don't add anything to html
 
 003 Serving Custom Assets
+- We can style content of ejs file like we do with html
+It can be done by style tag inside ejs file or by link to a css file with link tag -> href="/style.css" 
+-> IMPORTANT: blackslash here is important, means we want css file another folder with current ejs file 
+Otherwise, if no blackslash -> ejs will think we are refering to a css file in the same folder
+- NOTE: we dont put css file in the same folder with ejs 
+-> But, create a new folder called "public" to store static content
+-> NOTE 2: we must tell express where we put these static content by : 
+app.use(express.static("public"));
+-> We also can tell express what template type use so we dont need .ejs part when render ejs file to user
+app.set("view engine", "ejs");
+
+- IMPORTANT: 
++ Problem: if we have 1000 ejs files, we may want some mechanism too simplify the overlap parts between many files
++ Solution: we define overlap parts in seperated ejs file , so we just need to make a call to them to include them 
+<% include partials/header %> -> here we put all overlap parts in one folder called "partials", which in "public" 
+we may need include a footer part , or navbar , or anything... we use among alot of files
++ In jade, we refer to these as layout (but its a different story)
+
 
 004 Post Requests Part 1
 
