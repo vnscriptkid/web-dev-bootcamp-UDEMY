@@ -5,5 +5,27 @@
 003 Mongo Shell Basics
 
 004 Intro to Mongoose Part 1
+- What is mongoose: package from npm, help us interact with mongodb from nodejs
+simplify the process of interacting with db
+- define schema is a way we say what pattern of data we want to add to db (structured data in this case)
+though mongo can handle unstructured data (unpredictable data)
+var catSchema = new mongoose.Schema({}); -> Schema() takes in a object contains key-value pairs
+that are corresponding to (name of column : type of column) in db
+- Next step: 
+var Cat = mongoose.model('Cat', catSchema);
+-> what we do here: takes in
++ singular noun : represent a entity of "cats" collection (table) in MongoDB 
++ catSchema : is pattern of data that we want to add to DB (a way to structure input data to db)
+_IMPORTANT: Actually, what we return from this model function is a MODEL
+that has methods to interact with db : like Cat.find({}, function(err, cats){})
+-> here first arg is a black object because we want to get all of cats from db, cats here is array return from db
+- Cat.create({}, callback) -> create a new instance of cat model and adds it in db
+
+- We can create a object (instance) of MODEL by : new Cat({}); 
+-> this is a object that contains all properties of catSchema 
+and methods like : save -> save this object to db , for example (this method is same as Cat.create()) 
+                                                                                    
+-> NOTICE: All the methods may need a call-back function to check (not mandatory) if process of executing methods error
+2 arguments can be passed in is : err and the object if the methods is executed correctly         
 
 005 Intro to Mongoose Part 2
