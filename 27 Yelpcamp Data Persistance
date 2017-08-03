@@ -1,0 +1,10 @@
+001 Adding Mongoose
+Some steps must follows to connect to mongodb through mongoose
+  1. include package: var   mongoose = require('mongoose');
+  2. connect to the db :    mongoose.connect('mongodb://localhost/db-name')
+  3. define schema :        var catSchema = new mongoose.Schema({name: String, age: Number});
+  4. compile to model :     var Cat = mongoose.model('Cat', catSchema);
+
+002 Campground Show Page Part 1
+
+003 Campground Show Page Part 2
