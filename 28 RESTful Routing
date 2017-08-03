@@ -1,0 +1,46 @@
+001 Intro to REST
+- Just a convention of how we name the route 
+In other words, it's a pattern that we should follow when define (or name) the route
+- There are total 7 RESTful routes
+
+002 RESTful Blog App INDEX
+- Create project, install all stuff needed
+- Include body-parser, express, mongoose
+- 4 steps with mongoose to setup things: require, connect, schema, compile to model
+- 3 steps must-have for most of project:
+  + app.set('view engine', 'ejs');
+  + app.use(express.static('public')); -> tell express where we store static content like html, css, js
+  + app.use(bodyParser.urlencoded({extended: true}));
+- our blog model contains : title, image, body, created (date)
+-> all are strings, except created -> created : {type: Date, default: Date.now}
+-> we can set default for other attributes as well if needed
+
+- Main : Set INDEX route : app.get('/blog', callback);
+-> What we need here is get all the blogs from db by .find({}, allBlogs)
+-> then if we get the arrays of all blogs from db -> we render to index.ejs with these data
+
+003 Blog App Layout
+- Add header and footer partials
+- Semantic UI: just like bootstrap : we can include it locally or use cdn link
+
+004 RESTful Blog App SHOW
+<div class="ui fixed inverted menu">  === <div class="navbar navbar-inverse">
+  <div class="ui container">          === <div class="container">
+      <div class="header item><i class="code icon"></i>Blog Site</div>      === <div class="navbar-brand">
+      <a href="/" class="item"> Home</a>
+      <a href="/blogs/new" class="item"> New Post </a>    
+  </div>
+</div>
+
+NOTICE: We can use customized css file to change style of all predefined class
+  
+
+005 RESTful Blog App EDIT and UPDATE
+
+006 RESTful Blog App DESTROY
+
+007 RESTful Blog App Final Touches
+
+
+
+
