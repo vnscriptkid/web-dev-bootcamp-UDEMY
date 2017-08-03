@@ -1,9 +1,22 @@
 001 Initial Routes
+- Notice route convention
++ app.get('/campgrounds', ...) -> this route to show all the campground
++ app.get('/campgrounds/new, ...) -> this route will render a form page to create new camp
++ app.post('/campgrounds', ...) -> this route to process form data from route above and may redirect to somewhere 
+res.redirect('/campgrounds'); 
 
 002 Layout
 
 003 Creating Campgrounds
+- Using ejs template
 
 004 Styling Camgrounds
+- jumbotron: h1, p, btn btn-primary (btn can be applied for anchor tag <a >)
+-> we might want to put jumbotron in header tag -> for meaningful purpose
+- Using grid system to fit the image 
+.row style="display:flex; flex-wrap:wrap"-> .col col-md-3 col-sm-6 -> .thumbnail -> .caption
 
 005 Styling Nav and Forms
+- btn-block make the button go along the width
+- .text-center is equal to style="text-aligh: center"
+- .container is equal to style="margin: 0 auto 0 auto"
