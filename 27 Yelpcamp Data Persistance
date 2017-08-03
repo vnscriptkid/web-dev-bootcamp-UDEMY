@@ -6,5 +6,13 @@ Some steps must follows to connect to mongodb through mongoose
   4. compile to model :     var Cat = mongoose.model('Cat', catSchema);
 
 002 Campground Show Page Part 1
+RESTful ROUTES
+- INDEX   /dogs       GET   Display a list of all dogs
+- NEW     /dogs/new   GET   Display form to make a new dog
+- CREATE  /dogs       POST  Add a new dog to DB
+- SHOW    /dogs/:id   GET   Shows info about one dog
 
-003 Campground Show Page Part 2
+003 Campground Show Page Part 2:
+- model from mongoose has a function called : findById()
+-> this id is automatically created
+- db.collection.drop() -> delete all the collection from db
