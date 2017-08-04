@@ -22,8 +22,6 @@ In other words, it's a pattern that we should follow when define (or name) the r
 003 Blog App Layout
 - Add header and footer partials
 - Semantic UI: just like bootstrap : we can include it locally or use cdn link
-
-004 RESTful Blog App SHOW
 <div class="ui fixed inverted menu">  === <div class="navbar navbar-inverse">
   <div class="ui container">          === <div class="container">
       <div class="header item><i class="code icon"></i>Blog Site</div>      === <div class="navbar-brand">
@@ -32,14 +30,32 @@ In other words, it's a pattern that we should follow when define (or name) the r
   </div>
 </div>
 
-NOTICE: We can use customized css file to change style of all predefined class
-  
+NOTICE: We can use customized css file to change style of all predefined class  
 
-005 RESTful Blog App EDIT and UPDATE
+004 RESTful Blog App NEW and CREATE
 
-006 RESTful Blog App DESTROY
+  <div class="ui main text container segment"> 
+      <div class="ui huge header">New Blog</div>
+      <form class="ui form" action="/posts" method="POST">
+        <div class="field">
+          <input type=text name="post[title]" placeholder="title">				
+        </div>			
+        <input type="submit" class="ui basic purple button" value="SUBMIT">					
+      </form>
+    </div>
+    
+    -> the way UI Semantic name their class is more meaningful than Bootstrap
 
-007 RESTful Blog App Final Touches
+005 RESTful Blog App SHOW
+
+<%= VS <%-: the latter consiter also html tag inside it and the first one dont
+More deeply, the first one push all tags to buffer and dont print them to browser
+
+006 RESTful Blog App EDIT and UPDATE
+
+007 RESTful Blog App DESTROY
+
+008 RESTful Blog App Final Touches
 
 
 
