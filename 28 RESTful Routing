@@ -105,6 +105,14 @@ This method just takes in 2 args
 
 008 RESTful Blog App Final Touches
 
+- Sanitize blog body: Avoid injecting script tag to the content of post
+var expressSanitizer = require('expressSanitizer');
+app.use(expressSanitizer()); -> IMPORTANT NOTICE: This is must be after bodyParser
 
+- To filter the content from POST request: 
+we use function : req.sanitize() -> pass in the content we want to filter and
+assign back to it
+
+-> We apply sanitize() for Create and Update route
 
 
