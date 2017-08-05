@@ -51,9 +51,57 @@ NOTICE: We can use customized css file to change style of all predefined class
 <%= VS <%-: the latter consiter also html tag inside it and the first one dont
 More deeply, the first one push all tags to buffer and dont print them to browser
 
+<div class="ui segment container main"> 
+		<div class="ui huge header centered"><%= post.title %></div>
+		<div class="ui top attached">
+			<div class="item">
+				<img class="ui centered rounded image" src="<%= post.image %>" width="500" height="250" >
+				<div class="content">
+					<span><%= post.created.toDateString()%></span>
+				</div>
+				
+				<div class="description">
+					<p><%= post.content%></p>
+				</div>
+			
+			</div>
+		</div>
+	
+	</div>
+
 006 RESTful Blog App EDIT and UPDATE
+-> EDIT ROUTE : 
++ app.get('/posts/edit', ...) -> get the form with the data pre-filled 
+
+Problem arises because HTML doesn't support PUT request so even when we specify our form
+to be sent as a PUT request, browser treat as a POST request instead
+-> Question : Why don't we just use the POST request and change the route
+Answer: We want to follow the convetion of RESTful ROUTE
+-> Solution to this problem : In client we add a parameter to the action like
+action = "/posts/<%=post._id%>?method=PUT" method="POST"
+In server side, we use module : method-override 
+app.use('methodOverride('_method')); -> This means we want to override the method in form with whatever we specify _method in the params
+
++ app.put('/posts', ...);
+-> UPDATE ROUTE
+This route is responsible for finding the matching post and update it
+We'll use method findByIdAndUpdate that provided by model Post
+This method takes in 3 parameters which are 
++ id : req.params.id
++ new Post
++ callback with 2 parameters which are : err and updatedPost
 
 007 RESTful Blog App DESTROY
+- Very similar to EDIT AND UPDATE ROUTE
+- In client side , at show page , we have a form that method="POST"
+action="/posts/<%=post._id%>?_method=DELETE
+- We want to server side overwrite the POST method by the DELETE method in params which is passed in
+- Also, We have a route in server side that process this 
+app.delete('/posts/:id', ...)
+-> Here we'll use the method findByIdAndRemove that is provided by Post model
+This method just takes in 2 args
++ id
++ callback with only one arg which is err
 
 008 RESTful Blog App Final Touches
 
