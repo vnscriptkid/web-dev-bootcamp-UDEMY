@@ -1,0 +1,73 @@
+001 Intro to Associations
+- Ultil now we just deal with only one entity which is post
+- But in the real world, it's not simple as that when we have to face with a lot of 
+different entities that is interconnected with each other.
+For example : User, Post, Photos, Comments, Albums, Tags, Likes
+- Type of relationships: one-one, one-many, many-many
+
+002 Embedded Data
+- Embedding Data: 
+User
+Post
+-> user can have many posts, but a post only belongs to one user
+touch embed.js
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/blog_demo')
+
+-> We'll define 2 models : USER and POST
+-----------------------------------------------------
+var postSchema = new mongoose.Schema({
+  title: String,
+  content: String
+});
+var Post = mongoose.model('Post', postSchema);
+-----------------------------------------------------
+var userSchema = new mongoose.Schema({
+  email: String,
+  name: String,
+  posts: [postSchema]               ->>>>>>> here we're embeding data of one entity to another, means one user can have many posts, posts here is an array
+});                                 ->>>>>>> this case, we MUST define postSchema first
+var User = mongoose.model('User', userSchema);
+-----------------------------------------------------
+
+003 Object References
+Same identities as the last lectures, we have to change the userSchema a little bit
+var userSchema = new mongoose.Schema({
+  email: String,
+  name: String,
+  posts: [{
+    type: mongoose.Schema.Types.ObjectId,           ->>>> Actually we dont store actual post here but just _id of it
+    ref: "Post"                                     
+  }]
+}
+
+Example : User.findOne({email: "abc@123.com"}).populate('posts').exec(function(err, user){    ->>>populate here will extract all info of each post
+  console.log(user);
+});
+
+WHEN to use one vs another??? It depends on situation -> we'll have clear answer after yelpcamp project
+
+004 Module.exports
+- Make our code more modular
+- Clean all the code we've written
+- Move db part to a seperated file, move routes to another part
+- module.exports means what "return" from a file
+
+We create a file post.js in models folder that is newly created
+- We copy all the things related to post consists of : 
++ require
++ connect
++ define schema
++ and lastly
+module.exports = mongoose.model('Post', postSchema);
+-> This line means we want to use this model from another file
+
+- In another file, we use Post model by following: 
+var Post = require('./models/post'); ->>>> ./ means we want to find "models" folder in current folder
+Now we can use Post model
+
+
+
+
+
+
