@@ -1,0 +1,31 @@
+001 Yelpcamp Refactoring App
+Put database things to a seperated file in "models" folder
+Beside "Camp" model that we've already created , we make another model called "Comment" and link it to app.js by module.exports
+
+002 Yelpcamp Seeding the database 
+We'll use a seeds.js file to seed the database, this file include model Camp and define a function seedDB()
+This function then is export by module.exports . So other file can call to this function
+
+003 Yelpcamp Comment Model
+- Create a new model Comment by first define commentSchema with 2 attributes:
++ author : String
++ text : String
+-> Then: module.exports = mongoose.model('Comment', commentSchema);
+
+- Change postSchema a little to associate with Comment model by id reference
+add a attribute "comments" -> comments : [
+                                {
+                                  type: mongoose.Schema.Types.ObjectId,
+                                  ref: "Comment"
+                                }
+                              ]
+-> This means we have comments is a array, each element is a reference to Comment by id                              
+
+004 Yelpcamp Creatings Comments Part 1
+
+005 Yelpcamp Creating Comments Part 2
+
+006 Yelpcamp Styling Comments Part 1
+
+007 Yelpcamp Styling Comments Part 2
+
