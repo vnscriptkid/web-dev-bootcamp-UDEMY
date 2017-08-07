@@ -22,8 +22,16 @@ add a attribute "comments" -> comments : [
 -> This means we have comments is a array, each element is a reference to Comment by id                              
 
 004 Yelpcamp Creatings Comments Part 1
+- Create a route that give the user a form to make their comment based on a SPECIFIC camp
+something like: app.get('/campgrounds/:id/comments/new', ...)
+-> this route first find the camp that match the id, if found it render to template that make a form
 
 005 Yelpcamp Creating Comments Part 2
+- Create a route that process submit form from user
+app.post('/campgrounds/:id/comments', ...)
+First findById to find the camp that matching with id, then Comment.create() to create a comment with data
+from user -> push that comment to the camp that is Found above
+Finaly, campFound.save() and redirect to the show page of that camp
 
 006 Yelpcamp Styling Comments Part 1
 
