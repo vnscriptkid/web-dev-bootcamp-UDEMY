@@ -1,0 +1,22 @@
+Install some need packages: 
+passport , passport-local, passport-local-mongoose, express-session
+
+Set up "User" model, in this model require "passport-local-mongoose"
+We plug some methods in this model by: 
+userSchema.plugin(localStrategyMongoose);
+
+We set passport and session in app.js: 
+require all 4 packages above
+With express-session: 
+app.use(require('exress-session')({
+  secret: "Put anything here will be ok",
+  resave: false,
+  saveUninitialized: false
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new localStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
