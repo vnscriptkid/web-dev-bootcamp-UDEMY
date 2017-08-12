@@ -17,5 +17,33 @@ app.use(campRoutes);
 NOTICE: If the all routes in the same route file has the same sub route ahead, we can cut it and put in app.use 
 
 002 User Associations Comment
+- Change the comment Schema a little bit to have is associate with A particular user
+- Author Schema now have two elements
++ First , content of the comment -> String
++ author is a object that contains 2 attributes : 
+  . id -> pull out from current logined user
+  . username -> all so from current user
+-> author now is contains a reference to User model
+
+var commentSchema = mongoose.Schema({
+  text: String,
+  author: {
+    id: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User'
+    },
+    username: String
+  }
+});
+
+-> FINAL : we also have to change route that processes the POST request from User (for adding a new comment)
++ first , pull out the camp from database by id in the params
++ Comment.create -> using this to create a new comment object from model
+  - Retrieve comment (now just contains text) from the request
+  - Assign id and username for this new comment object (id and username is from req.user)
+  => Save this comment to database
+  => Push this comment to comment array of that campground
+  => Save camp to database
+  redirect to the show page of that campground page
 
 003 User Association Campground
