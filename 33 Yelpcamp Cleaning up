@@ -1,0 +1,21 @@
+001 Refactoring Routes
+mkdir routes
+cd routes
+touch campgrounds.js comments.js index.js
+- In move all the routes from app.js to the corresponding files. The purpose of this is 
+breaking down the big problem to smaller one. Each file will process all routes that related to a entity
+- In each file rather than using app.protocol(...) , we create a router as following
+var express = require('express');
+var router = express.Router({mergeParams: true}); -> mergeParams is important when the route contains param, otherwise param will be null BE CAREFUL
+                                                      BECAREFUL
+Replace all the 'app' by router
+At the end of the file, export router by: module.exports = router;
+In our main file app.js , we want to link to these files : 
+var campRoutes = require('../routes/camps');
+app.use(campRoutes);
+
+NOTICE: If the all routes in the same route file has the same sub route ahead, we can cut it and put in app.use 
+
+002 User Associations Comment
+
+003 User Association Campground
