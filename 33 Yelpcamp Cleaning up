@@ -47,3 +47,5 @@ var commentSchema = mongoose.Schema({
   redirect to the show page of that campground page
 
 003 User Association Campground
+- Add isLoggedIn middleware to the routes that create a new camp to prevent unauthorized people add data to database
+- Associate creating new camp with a user is pretty much the same as above
