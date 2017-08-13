@@ -1,7 +1,31 @@
 001 Intro to YelpCamp new Features
-
+  - flash message : you see it one time not always (after successful registration)
+  - option to edit and delete a campground (just owner can do these things)
 002 Campground Edit and Update
-
+  - need some new routes: 
+    + campgrounds/:id/edit  using GET method -> show the edit form (EDIT)
+    + campgrounds/:id       using PUT method -> making the changes in db (UPDATE)
+  - To use these ROUTES , we must install method-override method in app.js
+  var methodOverride = require('method-override');
+  app.use(methodOverride('_method')); 
+  Remember: Client can't use methods like PUT so there must be a mechanism that finally the method is changed to PUT
+  So we add a params _method=something to the request. So method-override will change the method of request to whatever something
+  is equal to , before sending to route for processing
+  
+  + The first route render a form that similar to creating a new camp but with data is filled
+  we must findById with id from params to check if id is existed. if yes we generate a form 
+  otherwise, just redirect to /campgrounds (camp/index.ejs)
+  
+  + The second route is responsible for updating from database.
+  Rather than findById then Update we can just simply findByIdAndUpdate()
+  with 3 params
+    + first: id from param -> req.params.id
+    + second: the updated camp (that we take from form)
+    + third is callback
+    
+    => Now , everything seems done but Anyone is able to update the camp
+    What we want is just the owner of camp has the right to edit and delete camp
+  
 003 Campground Destroy
 
 004 Campground Authorization Part 1
