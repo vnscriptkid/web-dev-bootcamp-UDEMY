@@ -27,6 +27,13 @@
     What we want is just the owner of camp has the right to edit and delete camp
   
 003 Campground Destroy
+- The logic is quite the same as UPDATE
+- In show camp page, we add a form that method=POST and action="campgrounds/<%=camp._id%>?_method=DELETE"
+- In the camp ROUTES , we add a route that process the coressponding actions above
+This route uses delele method like : router.delete()
+- We use a combination function : findByIdAndDelete
+-> This function just take id from params and a call back
+-> Either if the error occurs or not, both cases we redirect to the index page
 
 004 Campground Authorization Part 1
 
