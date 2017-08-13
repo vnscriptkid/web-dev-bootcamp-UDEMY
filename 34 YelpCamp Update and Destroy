@@ -36,6 +36,27 @@ This route uses delele method like : router.delete()
 -> Either if the error occurs or not, both cases we redirect to the index page
 
 004 Campground Authorization Part 1
+- Who you are ? And What you can do? or what is your permissions?
+- First, we want only people is authenticated AND who is the owner of a camp:  
+  + edit (show form edit)
+  + update (actually make changes in the db)
+  + delete (delete from database)
+-> How we do it? We make a middleware rather than put all the checking stuff in routes though we can do it
+-> But our purpose here is Readable Code and Dont repeat your self
+
+We create a function , which is a middleware, this guy then is pass as a second parameters of routes that 
+we want to check. Actually this guy check if req is meets our condition then we call next() means we jump into
+the callback, else we can redirect somewhere
+
++ First we check if user is logged in (by req.isAuthenticated())
+if already logged in , we jump to check 2
+else we redirect('back')
++ If first condition is satified , we do next check , which is if the current user is owner of particular campground
+if yes, we call next() function , that means we go to the callback
+else , we redirect('back')
+
+-> finally, we edit the template such that update and delete features only is available with user who is authenticated
+and has owner of that camp
 
 005 Campground Authorization Part 2
 
