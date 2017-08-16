@@ -67,3 +67,35 @@ and has owner of that camp
 008 Comment Authorization
 
 009 Refactoring Middleware
+- Create a new folder 'middleware' with file 'index.js' inside 
+-> Why we need file name 'index.js' -> so when include to another file we just specify folder name -> it will automatically 
+understand index.js is the main file of that module
+- We store all middleware stuff in here and exports as a module for others can use
+- There are 3 ways to export: (in essence , they are the same) we define a object and export it out
+  1. middlewareObj = {}
+    middlewareObj.checkCampOwnership = function(){}
+    middlewareObj.checkCommentOwnership = function(){}
+    module.exports = middlewareObj;
+    
+  2. middlewareObj = {
+    checkCampOwnership: function(){},
+    checkCommentOwnership: function(){}
+  }
+  module.exports = middlewareObj;
+  
+  3. module.exports = {};
+  
+  -> Why we need seperated file for middleware? readable code, break the problems down to smaller problems (each file just responsible
+  for a purpose), avoiding repeating code (every routes we have to define middleware if we want to use it)
+
+
+
+
+
+
+
+
+
+
+
+
