@@ -1,0 +1,12 @@
+001 Flash Messages Installation
+- What is Flash? It' just kind of message that is displayed when user perform a action
+like login, logout, adding camp ... to inform that state of that action (whether it is succeed or fail)
+- We'll use module 'connect-flash': npm install connect-flash --save
+- Include: var flash = require('connect-flash')
+-> app.use(flash());
+- express-session is prerequisite. See previous lectures
+- We put the flash in the middleware before redirect to where (so the flash message is taken along)
+
+002 Flash Messages Adding Bootstrap
+
+003 Flash Messages Better Errors
